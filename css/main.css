@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5em;
+    border: 1px solid #aaa;
+    padding: 0.5em;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+    background-color: slategray;
+}
+.map-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.25em;
+    border: 1px solid #ddd;
+    padding: 0.5em;
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+#map {
+    border: 1px solid #aaa;
+}
+.info {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    /* overflow-y: scroll; */
+}
+.geolocation, .azimuth {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 0.5em;
+    background-color: #fff;
+}
+#compass {
+    transform-origin: center;
+    /* transform: scale(1, 0.5) rotateX(60deg); */
+}
+.compass {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+#needle {
+    transform-origin: 80px 80px;
+    /* transform: rotateX(-60deg) scale(1, 2); */
+}
+.N, .E, .S, .W {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 3px;
+    line-height: 1em;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    border-radius: 100%;
+}
+.N {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.E {
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+}
+.S {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.W {
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+}
+.azimuth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+.compass-data {
+    flex-grow: 1;
+}
+input[name=azimuth]{
+    width: 100%;
+    text-align: right;
+}
+input[name=azimuth]:focus {
+    outline: none;
+}

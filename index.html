@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <script async src="https://maps.googleapis.com/maps/api/js?key=[YOUR_API_KEY]&callback=initMap"></script>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="map-container">
+                <p>Select PV plant location:</p>
+                <div id="map" style="height: 400px; width: 600px;"></div>
+            </div>
+            <div class="info">
+                <div class="geolocation">
+                    <p>Latitude: <span id="lat"></span></p>
+                    <p>Longitude: <span id="lon"></span></p>
+                </div>
+                <div class="azimuth">
+                    <div class="compass">
+                        <svg id="compass" width="160" height="160">
+                            <circle cx="80" cy="80" r="75" fill="#ccc"/>
+                            <line id="needle" x1="80" y1="80" x2="80" y2="5" stroke="#000" stroke-width="2"/>
+                        </svg>
+                        <span class="N">N</span>
+                        <span class="E">E</span>
+                        <span class="S">S</span>
+                        <span class="W">W</span>
+                    </div>
+                    <div class="compass-data">
+                        <input type="text" name="azimuth">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="js/main.js" async defer></script>
+</body>
+</html>
