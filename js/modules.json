@@ -1,0 +1,20 @@
+[
+    {
+        "manufacturer": "SolarWATT",
+        "model": "Vision 60M Construct",
+        "power": 310,
+        "length": 1680,
+        "width": 990,
+        "height": 40,
+        "weight": 22.8
+    },
+    {
+        "manufacturer": "SolarWATT",
+        "model": "Vision 60M Construct",
+        "power": 315,
+        "length": 1680,
+        "width": 990,
+        "height": 40,
+        "weight": 22.8
+    }
+]

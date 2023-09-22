@@ -134,10 +134,28 @@ function setAzimuth() {
     document.getElementById('needle').style.transform = 'rotate(' + ugao + 'deg)';
 }
 
+function fetchJSON(){
+    const url = '/js/modules.json';
+    fetch(url)
+    .then(response => {
+        if(!response.ok){
+            throw new Error('Network error while fetching JSON file!');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error: ', error);
+    });
+}
+
 /* automatsko pokretanje odredjenih funkcija */
 window.addEventListener('load', () => {
     // getUserGeolocation();
     initMap();
     document.querySelector('input[name=azimuth').value = "0.00°";
 	calculatePeakProduction();
+    fetchJSON();
 });
